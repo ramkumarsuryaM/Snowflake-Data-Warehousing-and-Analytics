@@ -1,0 +1,96 @@
+/*
+===============================================================================
+DDL Script: Create Bronze Tables
+===============================================================================
+Script Purpose:
+    This script creates tables in the 'bronze' schema, dropping existing tables 
+    if they already exist.
+	  Run this script to re-define the DDL structure of 'bronze' Tables
+===============================================================================
+*/
+
+--- BRONZE ---
+
+CREATE OR REPLACE DATABASE My_Data_Warehouse;
+CREATE OR REPLACE SCHEMA My_Data_Warehouse.Bronze;
+
+-- Create Tables
+-- CREATE CRM_CUST_INFO Table
+
+CREATE OR REPLACE TABLE My_Data_Warehouse.BRONZE.Cust_info
+(
+cst_id INT,
+cst_key VARCHAR(50),
+cst_firstname VARCHAR(50),
+cst_lastname VARCHAR(50),
+cst_marital_status VARCHAR(10),
+cst_gndr VARCHAR(10),
+cst_create_date DATE
+);
+
+SELECT * FROM My_Data_Warehouse.BRONZE.Cust_info;
+
+
+-- CREATE CRM_PRD_INFO Table
+
+CREATE OR REPLACE TABLE My_Data_Warehouse.BRONZE.Prd_info
+(
+prd_id INT,
+prd_key VARCHAR(50),
+prd_nm VARCHAR(50),
+prd_cost INT,
+prd_line VARCHAR(10),
+prd_start_dt DATE,
+prd_end_dt DATE
+);
+
+SELECT * FROM My_Data_Warehouse.BRONZE.Prd_info;
+
+-- CREATE CRM_SALES_DETAILS Table
+
+CREATE OR REPLACE TABLE My_Data_Warehouse.BRONZE.Sales_details
+(
+sls_ord_num VARCHAR(10),
+sls_prd_key VARCHAR(10),
+sls_cust_id INT,
+sls_order_dt INT,
+sls_ship_dt INT,
+sls_due_dt INT,
+sls_sales INT,
+sls_quantity INT,
+sls_price INT
+);
+SELECT * FROM MY_DATA_WAREHOUSE.BRONZE.SALES_DETAILS;
+
+-- CREATE erp_cust_az12 Table
+
+CREATE OR REPLACE TABLE My_Data_Warehouse.BRONZE.cust_az12
+(
+CID VARCHAR(20),
+BDATE DATE,
+GEN VARCHAR(20)
+);
+
+SELECT * FROM MY_DATA_WAREHOUSE.BRONZE.CUST_AZ12;
+
+-- CREATE erp_loc_a101 Table
+
+CREATE OR REPLACE TABLE My_Data_Warehouse.BRONZE.loc_a101
+(
+CID VARCHAR(20),
+CNTRY VARCHAR(20)
+);
+
+SELECT * FROM My_Data_Warehouse.BRONZE.loc_a101;
+
+-- CREATE erp_px_cat_g1v2 Table
+
+CREATE OR REPLACE TABLE My_Data_Warehouse.BRONZE.PX_CAT_G1V2
+(
+ID VARCHAR(10),
+CAT VARCHAR(20),
+SUBCAT VARCHAR(20),
+MAINTENANCE VARCHAR(10)
+);
+
+SELECT * FROM My_Data_Warehouse.BRONZE.PX_CAT_G1V2;
