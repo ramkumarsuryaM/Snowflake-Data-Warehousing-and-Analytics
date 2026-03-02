@@ -1,0 +1,24 @@
+
+-- Clone
+
+CREATE TABLE MY_DATA_WAREHOUSE.GOLD.CLONE_TABLE CLONE MY_DATA_WAREHOUSE.GOLD.FOR_TIME_TRAVEL;
+
+SELECT * FROM MY_DATA_WAREHOUSE.GOLD.CLONE_TABLE;
+
+-------------------------------------------------------------------------------------Data types
+
+create or replace table my_data_warehouse.public.my_data_types
+(
+  my_number number
+, my_text varchar(10)
+, my_bool boolean
+, my_float float
+, my_date date
+, my_timestamp timestamp_tz
+, my_variant variant
+, my_array array
+, my_object object
+, my_geography geography
+, my_geometry geometry
+, my_vector vector(int,16)
+);
