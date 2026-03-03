@@ -8,6 +8,7 @@ The data architecture for this project follows Medallion Architecture Bronze, Si
 
 **High Level Architecture:**
 
+https://github.com/ramkumarsuryaM/Snowflake-Data-Warehousing-and-Analytics/blob/main/Docs/Data_Architecture.png
 
 **Bronze Layer:** Stores raw data as-is from the source systems. Data is ingested from CSV Files into Snowflake Database.
 
