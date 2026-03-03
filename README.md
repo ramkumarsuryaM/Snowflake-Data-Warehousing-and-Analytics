@@ -8,13 +8,14 @@ The data architecture for this project follows Medallion Architecture Bronze, Si
 
 **High Level Architecture:**
 
-data_architecture_!
 
-**Bronze Layer:** Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
+**Bronze Layer:** Stores raw data as-is from the source systems. Data is ingested from CSV Files into Snowflake Database.
 
 **Silver Layer:** This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
 
-**Gold Layer:** Houses business-ready data modeled into a star schema required for reporting and analytics. 📖 Project Overview This project involves:
+**Gold Layer:** Houses business-ready data modeled into a star schema required for reporting and analytics. 
+
+📖 Project Overview This project involves:
 
 **Data Architecture:** Designing a Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.
 
@@ -42,7 +43,7 @@ data_architecture_!
 
 Building the Data Warehouse (Data Engineering) Objective**
 
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
+Develop a modern data warehouse using Snowflake to consolidate sales data, enabling analytical reporting and informed decision-making.
 
 **Specifications**
 
